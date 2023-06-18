@@ -34,7 +34,7 @@ def generate_id():
 
 ![image](https://github.com/Ja5onYang/forecarest-GoodG4m3/assets/135325526/3d8033fa-ec5a-4491-850e-8547bfa84588)
 
-3. generate a litter story
+3. generate a little story
 
    The ability of python can still make it. we import openai to generate an interesting story. Through some training samples, AI can automatically writes a short profile. We didn't actually implement this part, in theory it should work.
 

@@ -39,7 +39,7 @@ def generate_id():
    The ability of python can still make it. we import openai to generate an interesting story. Through some training samples, AI can automatically writes a short profile. We didn't actually implement this part, in theory it should work.
 
 Limitations and Future Enhancements:
-  1. The requirement of openai's API is very important, we have to have this to make it for the part of generating a litter story, instead of generating from the database, which is a little bit boring.
+  1. The requirement of openai's API is very important, we have to have this to make it for the part of generating a litter story, instead of generating from the database, which is a little bit boring. Besides, in order to enrich the profile for each item, in the complete product, we will not constantly use the training samples like "this guy" in the code of 'little story'. We will consider appending like "this little girl" or "this boy", which requires further processing of the gender corresponding to the name in order to feedback the correct personal pronoun. (of course, users can customize the pronouns)
   2. The edge detection is for the whole contour (the whole tree), so the random change to the items may not be ideal, so we still need to look for more advanced models or algorithms.
   3.  When the number of our customers becomes huge, the solution that timestamp + random number may not be so appropriate, we need other complex and better solutions to make it as unique as possible.
 

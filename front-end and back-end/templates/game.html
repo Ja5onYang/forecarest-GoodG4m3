@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Interface</title>
+</head>
+<body>
+    <h2>Welcome to the Game!</h2>
+    <p>User ID: {{ user_id }}</p>
+    <h3>Owned Items:</h3>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.name }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Negative Language Input:</h3>
+    <form id="nlpForm">
+        <textarea name="message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="comfortResult"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // 提交NLP安慰请求
+        $('#nlpForm').submit(function (event) {
+            event.preventDefault();
+            $.ajax({
+                url: '/comfort',
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function (response) {
+                    $('#comfortResult').text(response);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
